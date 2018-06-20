@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title>HELLO SHOES</title>
+<!--    <CENTER><h1>Kevin's Shoes stone<h1 /> -->
+  </head>
+  <script type="text/javascript">
+    numLeft = 3;
+    function proceedOrder() {
+      var inputValue = document.getElementById("number").value;
+
+      var pswValue = document.getElementById("psw").value;
+      if (pswValue == "") { // no password
+        hasDiscount = false;
+      } else {
+        if (pswValue != "ABD124") { // incorrect password
+          if (numLeft > 1) {    
+            numLeft -= 1;          
+            alert("Password in correct, you have "+numLeft+" chances left!");
+            
+            return;
+          } 
+          var hasDiscount = false;
+        } else {
+          var hasDiscount = true;
+        }
+      }
+      // calculate order sum
+      orderSum = inputValue * 180;
+      if (hasDiscount) {
+        orderSum *= 0.95;
+      }
+      if (orderSum < 200) {
+        orderSum += 10;
+        alert("Your total order amount of money is: $"+orderSum+" ! (Including $10 delivery fee)");
+      } else {
+        alert("Your total order amount of money is: $"+orderSum+" ! (FREE DELIVERY)");
+      }
+
+    }
+  </script>
+  <body>  
+  <P><strong>Product introduction: </strong></P>
+    <div>
+    <table border="3">
+    <tr>
+      <th style="font-size: 32">Picture</th>
+      <th style="font-size: 32">Description</th>
+      <th style="font-size: 32">Price</th>
+    </tr>
+    <tr >
+      <td style="width:800px;height:500px; text-align: center;"><img style="max-width:100%;max-height:100%"  src="Images/5.jpg" ></td>
+      <td style="width:500px font-size: 20; text-align: center; ">
+        <p>Nike-Air-Jordan-XI-11</p>
+        <ul >
+        <li>Comfort wear</li>
+        <li>Water protected</li>
+        <li>Special design</li>
+        <li>Air cushion</li>
+      </ul></td>
+      <td style="font-size: 20;text-align: center;"><p><del>$250</del><br/></p><p style="color: red">$180</p></td>
+    </tr>
+
+    </table>
+  </div>
+
+  <div style="font-size: 20">
+    <p>Like it? Don't hesitate to buy it!!</p>
+  Please enter amount: <input type="text" name="number" id="number">  <br/>
+  Please enter password (Regular customer only): <input type="text" name="psw" id="psw"> <br/>
+  <button onclick="proceedOrder();"><strong>Buy</strong></button>
+
+  </div>
+  <div style="margin-top: 30px">
+    <a href="index.htm">Back</a>
+  </div>
+  </body>
+</html>
