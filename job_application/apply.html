@@ -14,7 +14,7 @@
       <li><a href="about.html">About</a></li>
       <li><a href="enhancements.html">Enhancements</a></li>
     </ul>
-    <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="get">
+    <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
       <label>Job reference number</label>
       <input type="text" name="ref_num" id="ref_num" required="required"/>
       <br />
@@ -64,7 +64,11 @@
       <input type="text" name="first_name" id="first_name" required="required" />
       <br />
       <label>Skill list</label>
-      <input type="text" name="last_name" id="last_name" required="required" />
+      <input type="checkbox" name="skill" value="cpp" /> C++
+      <input type="checkbox" name="skill" value="autocad" /> AutoCAD
+      <input type="checkbox" name="skill" value="objectivec" /> Objective-C
+      <input type="checkbox" name="skill" value="ps" /> PhotoShop
+      <input type="checkbox" name="skill" value="java" /> Java
       <br />
       <label>Other skills</label>
       <input type="text" name="last_name" id="last_name" />
