@@ -10,3 +10,14 @@ ul.menu {background-color: gray}
 
 #job {min-height:100%;margin:0;padding:0;position:relative;}
 #job footer{position:absolute;bottom:0;width:100%;height:20px;background-color: grey; text-align: center; font-size: 14px}
+
+/*about.html style*/
+#about dt {width: 200px;}
+#about dl{clear:left;}
+#about dt,dd{float:left;}
+#about section {display:inline-block; margin: 10px; padding: 10px;position: relative;float: left; width: 40%; border: 5px solid purple; height: 400px}
+#about img {height:300px; width:300px}
+#about td {border:2px solid grey;}
+#about th {border:2px solid grey;}
+#about table .class_time {background-color: #FFBB77}
+#about table th {background-color: 	#0072E3}
