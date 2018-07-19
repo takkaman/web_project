@@ -1,13 +1,14 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="homepage" content="HTML">
   <title>Home Page</title>
-         <CENTER><h1>Ceylon Textile Suppliers<h1 /></CENTER>
+         
   </head>
   <body>
+    <h1>Ceylon Textile Suppliers</h1>
     <ul class="menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="jobs.html">Jobs</a></li>
@@ -16,34 +17,36 @@
       <li><a href="enhancements.html">Enhancements</a></li>
     </ul>
     <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
-      <label>Job reference number</label>
-      <input type="text" name="ref_num" id="ref_num" required="required"/>
+      <label>Job reference number
+      <input type="text" name="ref_num" required="required" pattern="[a-zA-Z0-9]{5,5}"></label>
       <br />
-      <label>First name</label>
-      <input type="text" name="first_name" id="first_name" required="required" />
+      <label>First name
+      <input type="text" name="first_name" required="required" pattern="[a-zA-Z]{1,20}"/></label>
       <br />
-      <label>Laet name</label>
-      <input type="text" name="last_name" id="last_name" required="required" />
+      <label>Last name
+      <input type="text" name="last_name" required="required" pattern="[a-zA-Z]{1,20}"/></label>
       <br />
       <label>Date of birth</label>
-      <input type="text" name="ref_num" id="ref_num" required="required"/>
+      <input type="date" name="birth_date" required="required"/>
       <br />
       <fieldset>
+      
       <legend>Gender</legend>
-      <input type="radio" id="gender">
-      <label>Male</label>
-      <input type="radio" id="gender">
-      <label>Female</label>
+      <label>
+      <input type="radio" name="gender" required>
+      Male</label>
+      <label><input type="radio" name="gender">
+      Female</label>
       </fieldset>
       <br />
       <label>Street Address</label>
-      <input type="text" name="last_name" id="last_name" required="required" />
+      <input type="text" name="addr" required="required" maxlength="40" />
       <br />   
       <label>Suburb/town</label>
-      <input type="text" name="ref_num" id="ref_num" required="required"/>
+      <input type="text" name="town" required="required" maxlength="40" >
       <br />
       <label>State</label>
-      <select name="school">
+      <select name="state">
       <option value="VIC">VIC</option>
       <option value="NSW">NSW</option>
       <option value="QLD">QLD</option>
@@ -56,24 +59,24 @@
       </select>
       <br />
       <label>Postcode</label>
-      <input type="text" name="last_name" id="last_name" required="required" />
+      <input type="text" name="Postcode" required="required" pattern="[0-9]{4,4}" />
       <br />     
       <label>Email address</label>
-      <input type="text" name="ref_num" id="ref_num" required="required"/>
+      <input type="email" name="email" required="required"/>
       <br />
       <label>Phone number</label>
-      <input type="text" name="first_name" id="first_name" required="required" />
+      <input type="text" name="phone" required="required" pattern="[0-9]{8,12}"/>
       <br />
       <label>Skill list</label>
-      <input type="checkbox" name="skill" value="cpp" /> C++
-      <input type="checkbox" name="skill" value="autocad" /> AutoCAD
-      <input type="checkbox" name="skill" value="objectivec" /> Objective-C
-      <input type="checkbox" name="skill" value="ps" /> PhotoShop
-      <input type="checkbox" name="skill" value="java" /> Java
-      <br />
-      <label>Other skills</label>
-      <input type="text" name="last_name" id="last_name" />
+      <input type="checkbox" name="Skill list" value="cpp" /> C++
+      <input type="checkbox" name="Skill list" value="autocad" /> AutoCAD
+      <input type="checkbox" name="Skill list" value="objectivec" /> Objective-C
+      <input type="checkbox" name="Skill list" value="ps" /> PhotoShop
+      <input type="checkbox" name="Skill list" value="java" /> Java
+      <input type="checkbox" name="Skill list" value="java" /> Other skills
+      <input type="text" name="other_skill" />
       <br />
       <input type="submit" value="Apply" />  
     </form>
   </body>
+</html>
